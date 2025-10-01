@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Siswa from "./pages/Siswa";
 import PaymentPage from "./pages/PaymentPage";
 import GurusPage from "./pages/Guru";
+import AbsensiPage from "./pages/AbsensiPage";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route path="/siswa" element={<Siswa />} />
             <Route path="/payment" element={<PaymentPage />} />
             <Route path="/Guru" element={<GurusPage />} />
-            
+            <Route path="/Absensi" element={<AbsensiPage />} />            
           </Routes>
         </div>
       </div>

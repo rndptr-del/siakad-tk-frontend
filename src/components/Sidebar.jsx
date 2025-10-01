@@ -19,7 +19,7 @@ export default function Sidebar() {
     { name: "Data Guru", path: "/Guru", icon: <BookOpen size={18} /> },
     { name: "Data Kelas", path: "/kelas", icon: <Layers size={18} /> },
     { name: "Data Mapel", path: "/mapel", icon: <ClipboardList size={18} /> },
-    { name: "Absensi", path: "/absensi", icon: <CalendarCheck size={18} /> },
+    { name: "Absensi", path: "/Absensi", icon: <CalendarCheck size={18} /> },
     { name: "Nilai", path: "/nilai", icon: <Award size={18} /> },
     { name: "Pembayaran", path: "/payment", icon: <CreditCard size={18} /> },
   ];
