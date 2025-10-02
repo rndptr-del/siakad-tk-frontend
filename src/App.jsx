@@ -6,6 +6,9 @@ import Siswa from "./pages/Siswa";
 import PaymentPage from "./pages/PaymentPage";
 import GurusPage from "./pages/Guru";
 import AbsensiPage from "./pages/AbsensiPage";
+import KelasPage from "./pages/KelasPage";
+import MapelPage from "./pages/MapelPage";
+import NilaiPage from "./pages/NilaiPage";
 
 function App() {
   return (
@@ -19,7 +22,10 @@ function App() {
             <Route path="/siswa" element={<Siswa />} />
             <Route path="/payment" element={<PaymentPage />} />
             <Route path="/Guru" element={<GurusPage />} />
-            <Route path="/Absensi" element={<AbsensiPage />} />            
+            <Route path="/Absensi" element={<AbsensiPage />} />
+            <Route path="/Kelas" element={<KelasPage />} />
+            <Route path="/Mapel" element={<MapelPage />} />
+            <Route path="/Nilai" element={<NilaiPage />} />            
           </Routes>
         </div>
       </div>

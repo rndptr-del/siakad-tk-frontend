@@ -111,17 +111,21 @@ export default function AbsensiPage() {
                   <td className="border px-3 py-2 text-center">{i + 1}</td>
                   <td className="border px-3 py-2">{s.nama}</td>
                   <td className="border px-3 py-2 text-center">
-                    <select
-                      value={absensi[s.id] || "hadir"}
-                      onChange={(e) => handleChangeStatus(s.id, e.target.value)}
-                      className="border px-2 py-1 rounded"
-                    >
-                      <option value="hadir">Hadir</option>
-                      <option value="izin">Izin</option>
-                      <option value="sakit">Sakit</option>
-                      <option value="alpa">Alpa</option>
-                    </select>
-                  </td>
+                  <div className="flex flex-row items-start gap-1">
+                    {["hadir", "izin", "sakit", "alpa"].map((status) => (
+                    <label key={status} className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name={`status-${s.id}`} // supaya unik per siswa
+                  value={status}
+                  checked={absensi[s.id] === status || (!absensi[s.id] && status === "hadir")}
+                  onChange={(e) => handleChangeStatus(s.id, e.target.value)}
+                />
+                  {status.charAt(0).toUpperCase() + status.slice(1)}
+                </label>
+                ))}
+              </div>
+                </td>
                 </tr>
               ))}
             </tbody>
